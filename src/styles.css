@@ -75,6 +75,7 @@ li {
 }
 
 .list-row p {
+  margin-right: 10px;
   overflow-wrap: break-word;
   word-break: break-all;
 }

@@ -11,6 +11,7 @@ export const CompleteTodos = (props) => {
             <li>
               <div key={todo} className="list-row">
                 <p>{todo}</p>
+                <div className="space"></div>
                 <button onClick={() => onClickReturn(index)}>戻す</button>
               </div>
             </li>

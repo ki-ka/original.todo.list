@@ -7,6 +7,7 @@ export const App = () => {
   const [todoText, setTodoText] = useState([""]);
   const [incompleteTodos, setIncompleteTodos] = useState([]);
   const [completeTodos, setCompleteTodos] = useState([]);
+  const [memo, setMemo] = useState(false);
 
   const enterTodoText = (event) => {
     setTodoText(event.target.value);
@@ -14,6 +15,8 @@ export const App = () => {
   };
 
   const getTodoText = (event) => setTodoText(event.target.value);
+
+  const onClickMemo = () => setMemo(!memo);
 
   const onClickAdd = () => {
     if (todoText === "") return;
@@ -63,6 +66,8 @@ export const App = () => {
         incompleteTodos={incompleteTodos}
         onClickDelete={onClickDelete}
         onClickComplete={onClickComplete}
+        onClickMemo={onClickMemo}
+        memo={memo}
       />
       <CompleteTodos
         completeTodos={completeTodos}
